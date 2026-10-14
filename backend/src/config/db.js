@@ -8,6 +8,9 @@ import { log } from "../common/utils/logger.js";
 
 export async function connectDB() {
   mongoose.set("strictQuery", true);
+  if (mongoose.connection.readyState === 1) {
+  return;
+}
 
   try {
     await mongoose.connect(env.mongodbUri, {
