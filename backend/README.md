@@ -260,7 +260,10 @@ PUT /api/settings/reminder
 
 Use your deployed production URLs here once they are published:
 
-- Live URL: https://amna-armada-booking-git-main-minahs-projects-329ac757.vercel.app/
+- Live URL: https://amna-armada-booking-7wg37ps3v-minahs-projects-329ac757.vercel.app/
+
+- `email`: amna@example.com
+- `password`: password123
 
 > Replace these placeholders with the actual deployed frontend and backend URLs from your hosting provider.
 
