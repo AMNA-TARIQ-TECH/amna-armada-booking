@@ -80,6 +80,10 @@ textarea {
   cursor: pointer;
 }
 
+.btn {
+  transition: background-color 140ms ease, transform 90ms ease, box-shadow 140ms ease, color 140ms ease;
+}
+
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -97,6 +101,38 @@ textarea {
 .btn-secondary {
   background: #eef2f7;
   color: var(--ink);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e6eefb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.06);
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-danger {
+  background: #fdecec;
+  color: var(--danger);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #fbdada;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(180, 36, 24, 0.06);
+}
+
+.btn-danger:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.10);
 }
 
 .btn-danger {
