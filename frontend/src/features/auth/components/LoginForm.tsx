@@ -48,11 +48,17 @@ export function LoginForm() {
     try {
       if (mode === "login") {
         await login(email, password);
-      } else {
-        await register(name, email, password);
+        navigate("/dashboard");
+        return;
       }
 
-      navigate("/dashboard");
+      await register(name, email, password);
+      setMode("login");
+      setName("");
+      setEmail("");
+      setPassword("");
+      setError("Account created successfully. Please log in.");
+      return;
     } catch (err) {
       setError((err as ApiError).message || "Something went wrong. Please try again.");
     } finally {
