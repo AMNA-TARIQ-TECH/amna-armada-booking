@@ -211,7 +211,7 @@ export function LoginForm() {
               {loading
                 ? "Please wait..."
                 : mode === "login"
-                  ? "Continue to dashboard"
+                  ? "Log In"
                   : "Create account"}
 
               {!loading && (
